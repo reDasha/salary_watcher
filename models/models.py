@@ -1,7 +1,6 @@
-from sqlalchemy import MetaData, Table, Column, Integer, Float, String, Boolean, Date
+from sqlalchemy import Table, Column, Integer, Float, String, Boolean, Date
 
-metadata = MetaData()
-
+from auth.database import metadata
 
 user = Table(
     "user",

@@ -29,6 +29,7 @@ current_user = fastapi_users.current_user()
 @app.get("/salary", tags=["salary"])
 def get_salary(user: User = Depends(current_user)):
     return {
+        "Сотрудник": user.username,
         "Текущая зарплата": user.current_salary,
         "Ближайшее повышение зарплаты": user.salary_increase_date,
     }
