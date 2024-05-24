@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends
 
 from auth.auth import auth_backend, fastapi_users
-from auth.schemas import UserRead, UserCreate
 from auth.database import User
+from auth.schemas import UserRead, UserCreate
 
 app = FastAPI(
     title="Salary Watcher",
